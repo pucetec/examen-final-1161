@@ -2,10 +2,11 @@
 
 Los alumnos tendrán diferentes proyectos entre si. Estos proyectos tendrán que ser desarrollados en base a sus conocimientos adquiridos en clases usando la librería ReactJS, contextos, orden de comonentes y, de creer conveniente, cualquier Framework de UI de la siguiente lista:
 
-Material UI
-Tailwind CSS
-Boostrap
-Chakra UI
+* Material UI
+* Tailwind CSS
+* Boostrap
+* Chakra UI
+
 La evaluación se reconocerá como entregada una vez que su respectivo Pull Request haya sido generado hacia el branch main. 
 
 # Importante
