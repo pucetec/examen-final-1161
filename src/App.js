@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import SelectButton from './common/Buttons/RadioButton';
+import ServicesCheckBox from './component/Service/CheckBox';
+import PopUpView from './component/Modal/PopUP';
+import { useState } from 'react';
+import { InfoContextProvider } from './context/InfoContext';
+import Page from './Pages/Page';
 
-function App() {
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <InfoContextProvider>
+      <Page></Page>
+    </InfoContextProvider>
   );
 }
 
