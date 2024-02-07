@@ -4,6 +4,7 @@ import { Modal, Button } from "@mui/material";
 function PropertyModal({ open, handleClose, propertyData }) {
   const {
     title,
+    price,
     image1,
     image2,
     type,
@@ -28,7 +29,9 @@ function PropertyModal({ open, handleClose, propertyData }) {
           padding: "20px",
         }}
       >
-        <h2>{title}</h2>
+        <h2>
+          {title} ${price}
+        </h2>
         <div>
           <img
             src={image1}

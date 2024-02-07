@@ -2,6 +2,7 @@ import { Checkbox, TextField, Button } from "@mui/material";
 import React, { useState } from "react";
 import Modal from "./Modal/Modal.js";
 import "./Checkbox.css";
+import "./App.css";
 /// link para probar imagen1 https://i.pinimg.com/originals/28/dc/d3/28dcd3bd56f526807ff51e76b73e7163.jpg
 /// link para probar imagen2 https://c8.alamy.com/compes/tdnkbn/casa-tipica-frente-con-falso-primer-piso-koszeg-hungria-tdnkbn.jpg
 
@@ -53,35 +54,52 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ textAlign: "center" }}>
       <h3>Formulario de Propiedad</h3>
+      <div>
+        <label for="title">Titulo</label>
+        <input name="title" id="title" onChange={handleInputChange} />
+      </div>
+      <br></br>
+      <div>
+        <label>Metros Cuadrados</label>
+        <input name="squareMeters" onChange={handleInputChange} />
+      </div>
+      <br></br>
+      <div>
+        <label>Precio</label>
+        <input name="price" onChange={handleInputChange} />
+      </div>
       <br />
-      <label>Titulo</label>
-      <input name="title" onChange={handleInputChange} />
+      <div>
+        <label>Baños</label>
+        <input name="bathrooms" onChange={handleInputChange} />
+      </div>
       <br />
-      <label>Metros Cuadrados</label>
-      <input name="squareMeters" onChange={handleInputChange} />
+      <div>
+        <label>Años de Antiguedad</label>
+        <input name="years" onChange={handleInputChange} />
+      </div>
       <br />
-      <label>Precio</label>
-      <input name="price" onChange={handleInputChange} />
+      <div>
+        <label>Telefono de Contacto</label>
+        <input name="phone" onChange={handleInputChange} />
+      </div>
       <br />
-      <label>Baños</label>
-      <input name="bathrooms" onChange={handleInputChange} />
+      <div>
+        <label>Imagen1</label>
+        <input name="image1" onChange={handleInputChange} />
+      </div>
       <br />
-      <label>Años de Antiguedad</label>
-      <input name="years" onChange={handleInputChange} />
+      <div>
+        <label>Imagen2</label>
+        <input name="image2" onChange={handleInputChange} />
+      </div>
       <br />
-      <label>Telefono de Contacto</label>
-      <input name="phone" onChange={handleInputChange} />
-      <br />
-      <label>Imagen1</label>
-      <input name="image1" onChange={handleInputChange} />
-      <br />
-      <label>Imagen2</label>
-      <input name="image2" onChange={handleInputChange} />
-      <br />
-      <label>Direccion</label>
-      <input name="address" onChange={handleInputChange} />
+      <div>
+        <label>Direccion</label>
+        <input name="address" onChange={handleInputChange} />
+      </div>
       <br />
       <div>
         <label>Tipo de Publicacion</label>
@@ -99,8 +117,10 @@ function App() {
         Venta
       </div>
       <br />
-      <label>Descripcion: </label>
-      <TextField name="description" onChange={handleInputChange} />
+      <div>
+        <label>Descripcion: </label>
+        <TextField name="description" onChange={handleInputChange} />
+      </div>
       <br />
       <div>
         <label>Servicios</label>
