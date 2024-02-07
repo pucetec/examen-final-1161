@@ -6,6 +6,9 @@ const CamionManagementContext = createContext();
 export const CamionManagementContextProvider = ({ children }) => {
 
   const [open, setOpen] = useState(false);
+  const [conductorName, setConductorName] = useState("");
+  const [receptionName1, setReceptionName1] = useState("")
+  const [address1, setAddress1] = useState("");
 
 //----------------------------------------------------------------
 //Style Modal
@@ -21,19 +24,29 @@ export const CamionManagementContextProvider = ({ children }) => {
     p: 4,
   };
 
-//-----------------------------------------------------------------
-//Function Modal
 
   const handleOpen = () => {
     setOpen(true);
+    
   };
 
   const handleClose = () => setOpen(false);
 
 
+
   return (
 
-    <CamionManagementContext.Provider value={{ style, open, setOpen, handleOpen, handleClose }}>
+    <CamionManagementContext.Provider value={{ style,
+                                               open,
+                                               setOpen, 
+                                               handleOpen, 
+                                               handleClose, 
+                                               setConductorName,
+                                               conductorName,
+                                               setReceptionName1,
+                                               receptionName1,
+                                               setAddress1,
+                                               address1 }}>
       { children}
     </CamionManagementContext.Provider>
   );

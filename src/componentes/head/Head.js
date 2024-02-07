@@ -1,13 +1,13 @@
 import React from "react";
-import Typography from "../commons/typography/Typography";
-import Etiqueta from "../commons/etiqueta/Etiqueta";
-import TextFieldMaterial from "../commons/input/TextFieldMaterial";
-import { useCamionManagementContext } from "../context/CamionManagementContext";
-import ButtonMaterial from "../commons/button/ButtonMaterial";
-import ModalMaterial from "../commons/modal/ModalMaterial";
+import Typography from "../../commons/typography/Typography";
+import Etiqueta from "../../commons/etiqueta/Etiqueta";
+import TextFieldMaterial from "../../commons/input/TextFieldMaterial";
+import { useCamionManagementContext } from "../../context/CamionManagementContext";
+import ButtonMaterial from "../../commons/button/ButtonMaterial";
+import ModalMaterial from "../../commons/modal/ModalMaterial";
 
 const Head = () => {
-  const { handleOpen } = useCamionManagementContext();
+  const { handleOpen, setConductorName } = useCamionManagementContext();
   return (
     <div>
       <center>
@@ -20,7 +20,7 @@ const Head = () => {
         <div style={{ alignItems: "center", marginLeft: 50}} >
           <div>
             <Typography type="p" text="Nombre conductor" />
-            <TextFieldMaterial />
+            <TextFieldMaterial onChange={(e) => setConductorName(e.target.value)}/>
           </div>
           <div>
             <Typography type="p" text="Foto camión" />
