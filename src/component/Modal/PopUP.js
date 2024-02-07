@@ -20,7 +20,7 @@ const style = {
   p: 4,
 };
 
-const PopUpView = ({formData}) => {
+const PopUpView = ({formData, selectOption, selectedServices}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleOpen = () => setIsOpen(true);
@@ -36,13 +36,28 @@ const PopUpView = ({formData}) => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-              Informacion de la propiedad
-            </Typography>
+            <h2>Informacion de la propiedad</h2>
+            <img src={formData.imagen1} alt="Imagen 1" />
+            <img src={formData.imagen2} alt="Imagen 2" />
             <div>
-              <h3>Titulo: {formData.titulo}</h3>
-              <h3>Area: {formData.metrosCuadrados} m2</h3>
-              <h3>Precio: $ {formData.precio}</h3>
+              <Typography>{formData.titulo}: ${formData.precio}</Typography>
+              <h4>Informacion Basica</h4>
+              <Typography>Area: {formData.metrosCuadrados} m2</Typography>
+              <Typography>Baños: {formData.baños}</Typography>
+              <Typography>Años de antiguedad: {formData.antiguedad}</Typography>
+              <Typography>Tipo de publicacion: {selectOption}</Typography>
+              <h4>Contacto</h4>
+              <Typography>Telefono: {formData.telefonoContacto}</Typography>
+              <Typography>Direccion: {formData.direccion}</Typography>
+              <h4>Descripcion</h4>
+              <Typography>Descripcion: {formData.descripcion}</Typography>
+              <br></br>
+              <h4>Servicios</h4>
+              <ul>
+                {Object.entries(selectedServices).map(([service, checked]) => (
+                  checked && <li key={service}>{service}</li>
+                ))}
+              </ul>
             </div>
             <Button onClick={handleClose}>Cerrar</Button>
           </Box>

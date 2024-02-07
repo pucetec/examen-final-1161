@@ -3,14 +3,18 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
 
-const SelectButton = () => {
+const SelectButton = ({ selectOption, setSelectOption }) => {
+  const handleOptionChange = (event) => {
+    setSelectOption(event.target.value);
+  };
+
   return (
     <FormControl>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="venta"
+        value={selectOption}
+        onChange={handleOptionChange}
         name="radio-buttons-group"
       >
         <FormControlLabel value="arriendo" control={<Radio />} label="Arriendo" />
