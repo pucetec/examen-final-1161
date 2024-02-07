@@ -9,6 +9,7 @@ export const CamionManagementContextProvider = ({ children }) => {
   const [conductorName, setConductorName] = useState("");
   const [receptionName1, setReceptionName1] = useState("")
   const [address1, setAddress1] = useState("");
+  const [tel1, setTel1] = useState("");
 
 //----------------------------------------------------------------
 //Style Modal
@@ -46,7 +47,9 @@ export const CamionManagementContextProvider = ({ children }) => {
                                                setReceptionName1,
                                                receptionName1,
                                                setAddress1,
-                                               address1 }}>
+                                               address1,
+                                               setTel1,
+                                               tel1 }}>
       { children}
     </CamionManagementContext.Provider>
   );

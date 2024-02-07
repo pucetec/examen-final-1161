@@ -6,7 +6,7 @@ import { Box, Modal } from "@mui/material";
 import TextFieldMaterial from "../input/TextFieldMaterial";
 
 const ModalMaterial = () => {
-  const { open, handleClose, style, setOpen, conductorName, receptionName1, address1 } = useCamionManagementContext();
+  const { open, handleClose, style, setOpen, conductorName, receptionName1, address1, tel1 } = useCamionManagementContext();
 
   return (
     <div>
@@ -15,11 +15,11 @@ const ModalMaterial = () => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        //onClick={handleClickModal}
+
       >
         <Box sx={style}>
           <Typography type="h1" text="Reporte de camiones asignados" />
-          <div>
+          
             <div>
               
               <div style={{ display: "flex"}}>
@@ -34,16 +34,24 @@ const ModalMaterial = () => {
               <div style={{ margin: "auto"}}>
                 {receptionName1}
               </div>
+            </div>
+            <div style={{ display: "flex"}}>  
               <Typography type="p" text="Dirección: " />
               <div style={{ margin: "auto"}}>
                 {address1}
               </div>
+            <div style={{ display: "flex"}}>  
+            <Typography type="p" text="Teléfono: " />
+            <div style={{ margin: "auto"}}>
+              {tel1}
+            </div>
             </div>
           </div>
           <ButtonMaterial onClick={() => setOpen(false)} text="CERRAR" />
         </Box>
       </Modal>
     </div>
+  
   );
 }
 

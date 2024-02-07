@@ -6,7 +6,7 @@ import ButtonMaterial from "../../commons/button/ButtonMaterial";
 import ModalMaterial from "../../commons/modal/ModalMaterial"; 
 
 const Body = () => {
-  const { setReceptionName1, setAddress1 } = useCamionManagementContext();
+  const { setReceptionName1, setAddress1, setTel1 } = useCamionManagementContext();
   return (
     <div>
       <div style={{ display: "flex"}}>
@@ -18,7 +18,7 @@ const Body = () => {
             </div>
             <div style={{ display: "flex"}}>
               <Typography type="p" text="Teléfono" />
-              <TextFieldMaterial style={{ marginLeft: 20}}/>
+              <TextFieldMaterial onChange={(e) => setTel1(e.target.value)} style={{ marginLeft: 20}}/>
             </div>
             <div style={{ display: "flex"}}>
               <Typography type="p" text="Persona que recibe" />
