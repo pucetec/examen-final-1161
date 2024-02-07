@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { FormProvider } from "./Context/FormContext";
+import { Form } from "./Components/Form/Form";
+import { Modal } from "./Components/Modal/Modal";
 
+// Componente principal que integra el formulario y el modal
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <FormProvider>
+        <div className="App container max-vh-100 my-4">
+          <Form camion={"Camion 1"} idModal={"#idModal1"} />
+          <Modal camion={"Camion 1"} idModal={"idModal1"} />
+        </div>
+      </FormProvider>
+      <FormProvider>
+        <div className="App container max-vh-100 my-4">
+          <Form camion={"Camion 2"} idModal={"#idModal4"} />
+          <Modal camion={"Camion 2"} idModal={"idModal4"}/>
+        </div>
+      </FormProvider>
+    </>
   );
 }
 
