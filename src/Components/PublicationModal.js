@@ -46,6 +46,17 @@ const PublicationModal = ({ isOpen, handleClose }) => {
               </Box>
             </Box>
           </Box>
+          <Box>
+            <h2 style={{ borderBottom: "solid", width: 250 }}>Contact</h2>
+            <Box sx={{ display: "", width: 600, textAlign: "left" }}>
+              <span style={{ display: "block" }}>Contact Number: {contactNumber}</span>
+              <span>Direction: {direction}</span>
+            </Box>
+          </Box>
+          <Box>
+            <h2 style={{ borderBottom: "solid", width: 250 }}>Description</h2>
+            <span style={{ display: "block" }}>{description}</span>
+          </Box>
           <Button variant="contained" onClick={handleClose}>
             Close
           </Button>
