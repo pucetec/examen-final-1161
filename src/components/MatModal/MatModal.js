@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import { useForm } from '../../context/FormContext/FormContext';
 
 const style = {
@@ -38,6 +40,12 @@ const style = {
     margin: '5px 0',
     color: '#777',
   },
+  
+  '& .closeButton': {
+    position: 'absolute',
+    top: '8px',
+    right: '8px',
+  },
 };
 
 const MatModal = () => {
@@ -52,6 +60,14 @@ const MatModal = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        <IconButton
+            className="closeButton"
+            onClick={handleClose}
+            aria-label="close"
+            color="inherit"
+          >
+            <CloseIcon />
+          </IconButton>
           <h2>{estate.titulo}: ${estate.precio}</h2>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           {Object.values(imageUrls).map((url, index) => (
