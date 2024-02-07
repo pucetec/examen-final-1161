@@ -39,13 +39,13 @@ function App() {
         <RadioGroup
           onChange={(event) => setType(event.target.value)}
           aria-labelledby="radio_buttons_publication_type"
-          defaultValue="sell"
+          defaultValue="Sell"
           name="radio-buttons-group"
           row
           sx={{ width: "245px" }}
         >
-          <FormControlLabel value="sell" control={<Radio />} label="Sell" />
-          <FormControlLabel value="rent" control={<Radio />} label="Rent" />
+          <FormControlLabel value="Sell" control={<Radio />} label="Sell" />
+          <FormControlLabel value="Rent" control={<Radio />} label="Rent" />
         </RadioGroup>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", paddingBottom: "20px" }}>
